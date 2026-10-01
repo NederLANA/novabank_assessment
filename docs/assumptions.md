@@ -33,7 +33,7 @@ validated with NovaBank in the Discover phase.
 | C4 | Logs retained centrally 12+ months with restricted access (from the brief). |
 
 ## Non-functional targets (from the brief)
-Availability >= 99.9%, RPO <= 1 h, RTO <= 4 h. Note: the PoC prod database has no high availability,
+Availability >= 99.9%, RPO (max data loss) <= 1 h, RTO (max down time) <= 4 h. Note: the PoC prod database has no high availability,
 so the **combined** SLA is likely below 99.9%. Zone-redundant HA is the recommended next step
 (verify current Azure SLA figures before quoting numbers).
 
@@ -43,3 +43,11 @@ countries, cross-border transfers, sanctions and AML at scale, multi-region acti
 follow-the-sun operations, concentration-risk and exit planning for the cloud provider, stricter
 resilience testing, SWIFT/payments connectivity, and a formal landing zone with management groups.
 The migration order stays the same (low-risk first), but each step needs far more evidence.
+
+## Open questions for NovaBank (to price the surge problem)
+1. Which past events caused failures, and what do your logs show (if any exist)? Central logging.
+2. During an event: peak requests per second, share of requests that failed, minutes of degraded service? Shape of the event. 
+3. Funnel: visitors -> started sign-up -> completed purchase. Where do people drop off between landing page and card bought. 
+4. Net margin per card, and how many cards does a customer buy per year (repeat rate)?
+5. Marketing or celebrity spend tied to each drop?
+Pricing logic: lost sales now = failed sign-ups x margin; lost future value = lost customers x expected repeat purchases; plus wasted marketing.

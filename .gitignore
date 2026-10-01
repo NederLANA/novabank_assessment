@@ -1,0 +1,9 @@
+# Terraform: downloaded plugins, state and plans (plans and state contain secrets)
+**/.terraform/
+*.tfstate
+*.tfstate.*
+tfplan
+tfplan-prod
+plan.json
+terraform.tfvars
+*.auto.tfvars
