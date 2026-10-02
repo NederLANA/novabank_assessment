@@ -1,4 +1,4 @@
-# AI in engineering today, and how CLEAR fits (for you)
+# AI in engineering today, and how CLEAR fits
 
 🟦 **Industry standard (2026), in one line:** AI drafts, machines check, humans approve. Treat AI output like work from a capable junior engineer.
 Typical pipeline for AI-written infrastructure: `fmt` -> `validate` -> linter -> security scanner (Checkov, Trivy) -> policy-as-code (OPA/Azure Policy) -> a plan attached to the pull request -> human review -> apply. Apply stays behind human or pipeline approval.
