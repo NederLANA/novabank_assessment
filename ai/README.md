@@ -26,7 +26,7 @@ evidence for audits. It supports engineers; it never applies changes.
 | 5 | "Review this sanitised plan against the checklist." (Step 6) | **TODO: run and paste result** | **TODO: mark each finding TRUE/FALSE/PARTLY** |
 
 ## Validaiton of AI:
-| Used CLEAR prompting framework to ask AI to spar with me to identity gaps of knowledge or test assumptions. Also checked against general knowledge of Gem|
-| Used GitHub co-pilot to cross check Claude recommendations.|
-| Checked Resource Groups in Azure portal to verify and query build|
+- Used CLEAR prompting framework to ask AI to spar with me to identity gaps of knowledge or test assumptions. Also checked against general knowledge of Gem.
+- Used GitHub co-pilot to cross check Claude recommendations.|
+- Checked Resource Groups in Azure portal to verify and query build|
 
