@@ -1,4 +1,4 @@
-# Speaking points (read aloud twice; make them yours)
+# Speaking points
 
 Legend: 🟦 learn | 🟩 say it | 🟨 watch out | 🟥 avoid | 🟪 consultant lens
 [YOUR STORY] = fill in a real example from your own experience. Do not invent one.
