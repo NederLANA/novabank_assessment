@@ -5,7 +5,7 @@
 # ===============================================================
 
 locals {
-  suffix = "${var.project}-${var.environment}-weu" # e.g. novabank-dev-weu  (weu = West Europe)
+  suffix = "${var.project}-${var.environment}-${var.location_short}" # e.g. novabank-dev-weu  (weu = West Europe)
 
   # SAY: "Every resource carries the same tags - that is how finance and audit find owners and environments."
   tags = {

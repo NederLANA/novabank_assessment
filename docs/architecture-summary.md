@@ -13,7 +13,7 @@ Get the foundation right, prove it works, then add AI where it pays.
 ![Current state](diagrams/current-state.svg)
 ![Target state](diagrams/target-state.svg)
 
-Azure, West Europe, Terraform. Dev and prod in separate resource groups. Container Apps runs a small public
+Azure, Sweden Central, Terraform. Dev and prod in separate resource groups. Container Apps runs a small public
 card-catalogue API (autoscaling for surges), managed PostgreSQL holds public catalogue data only, Log Analytics
 keeps logs 365 days, and Azure Policy enforces EU-only locations and tags. An AI IaC reviewer checks a sanitised
 plan before deployment.
@@ -53,3 +53,11 @@ CI pipeline with fmt/validate/scanner/plan, DORA register and exit plan, cost da
 ## Partnership path
 Land (this foundation) -> expand (gated waves) -> run (managed operations, DR tests, FinOps, evidence packs) ->
 innovate (AI on governed data).
+
+## Evidence captured (dev, 2 Oct 2026)
+- `/health` returns `{"status":"ok","env":"dev"}`.
+- First `/api/cards` call: `source: database`; second call: `source: cache` (30 s in-memory cache protects the DB).
+- `az resource list`: database, Log Analytics workspace, Container Apps environment and container app are all in `swedencentral` (EU).
+- Container logs show structured JSON request lines with correlation IDs.
+- Region note: West Europe and Germany West Central were refused for this new subscription (capacity / not accepting new customers). The policy accepts a list of EU regions, so Sweden Central keeps residency in the EU.
+- Not yet shown: autoscale under load, policy compliance report, restore test, prod deployment (defined in Terraform, not deployed).

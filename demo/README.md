@@ -40,7 +40,7 @@ Surge demo (shows autoscale):
 ```bash
 sudo apt-get install -y apache2-utils
 ab -n 3000 -c 60 $URL/api/cards
-az containerapp replica list -g $(terraform output -raw resource_group) -n ca-novabank-dev-weu-api -o table
+az containerapp replica list -g $(terraform output -raw resource_group) -n ca-novabank-dev-sdc-api -o table
 ```
 Region check (EU residency evidence): `az resource list -g <rg> --query "[].{n:name,l:location}" -o table`
 

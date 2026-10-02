@@ -92,3 +92,9 @@ variable "budget_email" {
   default     = "you@example.com"
   description = "Email for the budget alert"
 }
+
+variable "location_short" {
+  type        = string
+  default     = "gwc"
+  description = "Short region code used in resource names (weu, neu, gwc, sdc)"
+}

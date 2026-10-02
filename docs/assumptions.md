@@ -20,7 +20,7 @@ validated with NovaBank in the Discover phase.
 | T2 | Likely hidden dependencies: core ledger/payment-scheme connectors, identity/login, reporting and batch jobs reading the DB, KYC/AML screening, notification services. Not documented in the brief. | confirm |
 | T3 | Forgotten apps/databases (possibly replicated across regions) exist. Discovery must inventory them. | confirm |
 | T4 | The PoC exposes only **non-personal** data: a public gift-card catalogue. No customer data enters the PoC. | design choice |
-| T5 | Azure, Terraform, one subscription, region West Europe (fallback: another EU region if quota/restrictions apply). | design choice |
+| T5 | Azure, Terraform, one subscription, region Sweden Central (fallback: another EU region if quota/restrictions apply). | design choice |
 | T6 | Dev and prod are separate resource groups in one sandbox subscription (production would use separate subscriptions). | PoC compromise |
 | T7 | PoC budget below USD 15, using the Azure free account; prod is deployed briefly, validated, then destroyed. | constraint |
 
